@@ -1,12 +1,13 @@
-# tuie
+# tuie-todo
+
+Example Todo App
+
+
 
 A rich, performant TUI library for Rust.
 
 - [`tuie`](https://github.com/jake-stewart/tuie)
 
-
-
-Example Todo App
 
 
 
