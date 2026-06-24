@@ -11,8 +11,6 @@ A rich, performant TUI library for Rust.
 
 
 
-ult widgets are implemented.
-
 ## Examples tuie
 
 - [`tuie-demo`](https://github.com/jake-stewart/tuie-demo): discoverable, interactive reference covering most widgets and features.
