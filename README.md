@@ -1,0 +1,18 @@
+# tuie
+
+A rich, performant TUI library for Rust.
+
+- [`tuie`](https://github.com/jake-stewart/tuie)
+
+
+
+Example Todo App
+
+
+
+ult widgets are implemented.
+
+## Examples tuie
+
+- [`tuie-demo`](https://github.com/jake-stewart/tuie-demo): discoverable, interactive reference covering most widgets and features.
+- [`fz`](https://github.com/jake-stewart/fz): fuzzy finder built on tuie, a real-world example of a non-trivial application.
