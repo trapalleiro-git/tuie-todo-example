@@ -101,8 +101,6 @@ impl TaskList {
 
         let mut control_id = WidgetId::EMPTY;
 
-        let next_task = "What needs to be done ?".to_string();
-
         let tasks = vec![
             Task {
                 description: "Buy milk".into(),
@@ -119,6 +117,7 @@ impl TaskList {
         ];
 
         let filter_labels: Vec<&str> = FILTERS.iter().map(|(_, l)| *l).collect();
+        let next_task = "What needs to be done ?".to_string();
 
         let root = Pane::new().vertical().gap(2).children([
             Pane::new()
@@ -140,12 +139,11 @@ impl TaskList {
                     .margin(Spacing::new().horizontal(4))
                     .children([Input::new()
                         .word_wrap()
-                        .content(next_task.clone())
-                        // .placeholder(
-                        //     Text::new()
-                        //         .content(next_task.dim())
-                        //         .style(Style::new().italic().fg(Color::grey256(12))),
-                        // )
+                        .placeholder(
+                             Text::new()
+                                 .content(next_task.dim())
+                                 .style(Style::new().italic().fg(Color::grey256(12))),
+                        )
                         .id(&mut input_id)])]),
                 Pane::new().flex(1),
                 Button::new()
@@ -199,17 +197,17 @@ impl DelegateWidget for TaskList {
         }
 
         if event.of_by::<ClickEvent>(self.button_id) {
-            self.next_task = self.root.get_widget(self.input_id).unwrap().get_string();
+            self.next_task = self.root.get_widget(self.input_id).map(Input::get_string).unwrap();
 
             self.add_task();
             self.rebuild_list();
 
-            self.next_task = "What needs to be done ?".to_string();
+            self.next_task.clear();
 
             self.root
                 .get_widget_mut(self.input_id)
                 .unwrap()
-                .set_content(self.next_task.clone());
+                .set_content(String::new());
         }
     }
 }
