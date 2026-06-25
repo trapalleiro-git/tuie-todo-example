@@ -7,7 +7,7 @@ license = "MIT"
 edition = "2024"
 
 [dependencies]
-tuie = { version = "0.2.1", features = ["harmonious"] }
+tuie = { version = "0.2.4", features = ["harmonious"] }
 axis2d = "0.1.0"
 chord_macro = "0.1.0"
 
