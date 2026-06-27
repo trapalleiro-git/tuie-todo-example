@@ -91,7 +91,6 @@ impl TaskList {
                                 .flex(3),
                             Pane::new()
                                 .child(ButtonItem::new("[ Delete ]", Color::grey256(10)).id(&mut button_item_id))
-                                // .child(ButtonItem::new("[ Delete ]").id(&mut button_item_id))
                                 .x_place(Place::End)
                                 .flex(1),
                         ]);
