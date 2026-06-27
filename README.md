@@ -2,7 +2,7 @@
 
 Example Todo App
 
-
+![screenshot](https://github.com/trapalleiro-git/tuie-todo-example/blob/main/tuie-todo.png)
 
 A rich, performant TUI library for Rust.
 
