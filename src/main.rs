@@ -1,3 +1,4 @@
+use chord_macro::chord;
 use serde::{Deserialize, Serialize};
 use std::process::ExitCode;
 use tuie::prelude::*;
